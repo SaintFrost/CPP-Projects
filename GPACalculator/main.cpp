@@ -10,6 +10,7 @@ void CalculateGame206();
 void CalculateGame208();
 void CalculateGame302();
 void CalculateCmpe101();
+void CalculateAgpa(float note);
 void CalculateGpa();
 
 int main() {
@@ -49,6 +50,8 @@ void CalculateGame202() {
     float finalNote = ((final * 52 / 100) * 60 / 100) + inclass_online;
 
     game202 = assignmentNote + midtermNote + finalNote;
+
+    CalculateAgpa(game202);
 }
 
 void CalculateGame204() {
@@ -75,6 +78,8 @@ void CalculateGame204() {
     float finalNote = ((final * 52 / 100) * 60 / 100) + inclass_online;
 
     game204 = assignmentNote + midtermNote + finalNote;
+
+    CalculateAgpa(game204);
 }
 
 void CalculateGame206() {
@@ -90,6 +95,8 @@ void CalculateGame206() {
     float finalNote = final * 60 / 100;
 
     game206 = midtermNote + finalNote;
+
+    CalculateAgpa(game206);
 }
 
 void CalculateGame208() {
@@ -108,6 +115,8 @@ void CalculateGame208() {
     float finalNote = final * 60 / 100;
 
     game208 = presentationNote + assignmentNote + finalNote;
+
+    CalculateAgpa(game208);
 }
 
 void CalculateGame302() {
@@ -134,6 +143,8 @@ void CalculateGame302() {
     float finalNote = ((final * 52 / 100) * 60 / 100) + inclass_online;
 
     game302 = assignmentNote + midtermNote + finalNote;
+
+    CalculateAgpa(game302);
 }
 
 void CalculateCmpe101() {
@@ -155,6 +166,47 @@ void CalculateCmpe101() {
     float finalNote = final * 40 / 100;
 
     cmpe101 = problemNote + assignmentNote + midtermNote + finalNote;
+
+    CalculateAgpa(cmpe101);
+}
+
+void CalculateAgpa(float note) {
+    if (note <= 100 && note >= 85) {
+        cout << "Your AGPA is A" << endl;
+    }
+    else if (note < 85 && note >= 75) {
+        cout << "You AGPA is A-" << endl;
+    }
+    else if (note < 75 && note >= 70) {
+        cout << "Your AGPA is B+" << endl;
+    }
+    else if (note < 70 && note >= 65) {
+        cout << "Your AGPA is B" << endl;
+    }
+    else if (note < 65 && note >= 60) {
+        cout << "Your AGPA is B-" << endl;
+    }
+    else if (note < 60 && note >= 55) {
+        cout << "Your AGPA is C+" << endl;
+    }
+    else if (note < 55 && note >= 50) {
+        cout << "Your AGPA is C" << endl;
+    }
+    else if (note < 50 && note >= 45) {
+        cout << "Your AGPA is C-" << endl;
+    }
+    else if (note < 45 && note >= 40) {
+        cout << "Your AGPA is D+" << endl;
+    }
+    else if (note < 40 && note >= 35) {
+        cout << "Your AGPA is D" << endl;
+    }
+    else if (note < 35 && note >= 0) {
+        cout << "Your AGPA is F" << endl;
+    }
+    else {
+        cout << "Impossible note - Error!";
+    }
 }
 
 void CalculateGpa() {
